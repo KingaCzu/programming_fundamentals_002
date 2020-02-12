@@ -7,3 +7,25 @@ describe("catalogueService", () => {
     });
   });
 });
+describe("catalogueService.checkBook", () => {
+  test("returns true if the book exists in the list", () => {
+    expect(catalogueService.checkBook("Dracula by Bram Stoker")).toBe(true);
+  });
+});
+test("returns false if the book does not exist in the list", () => {
+  expect(catalogueService.checkBook("Moths by Pamela Mothman")).toBe(false);
+});
+describe("catalogueService.countBooksByFirstLetter", () => {
+  test("returns the number of books beginning with the given letter", () => {
+    expect(catalogueService.countBooksByFirstLetter("W")).toBe(2);
+  });
+  test("returns 0 if no books begin with the given letter", () => {
+    expect(catalogueService.countBooksByFirstLetter("X")).toBe(0);
+  });
+});
+describe("catalogueService.countBooksByKeyword", () => {
+  test("returns a count (Number) of how many book titles match a given keyword.", () => {
+  expect(catalogueService.countBooksByKeyword("assassin")).toBe(3) ||
+  catalogueService.countBooksByKeyword("normal");
+  });
+});

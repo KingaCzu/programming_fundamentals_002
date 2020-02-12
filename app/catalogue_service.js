@@ -23,19 +23,47 @@ const catalogue = [
 ];
 
 function countBooks() {
-  // Your code here
+  return catalogue.length;
+  //return total number of books
 }
 
-function checkBook(book) {
-  // Your code here
+function checkBook(bookTitle){
+for(let i = 0; i < catalogue.length; i++) {
+  const book = catalogue[i];
+  console.log(book);
+  if (book === bookTitle) {
+    return true;
+  }
 }
+return false;
+}
+
 
 function countBooksByFirstLetter(letter) {
-  // Your code here
+  let count = 0;
+  for(let i =0; i < catalogue.length; i++ ) {
+    // when viewing each book
+    // check the title 
+  if (catalogue[i][0] === letter)
+  {
+      // add one to the number of books by the given title 
+      count++;
+    }
+  }
+  // until we reach end
+  // return the number of books by the given title
+  return count;
 }
 
+
 function countBooksByKeyword(keyword) {
-  // Your code here
+  // check all titles for a given keyword
+let count = 0
+for(let i =0; i < catalogue.length; i++ ){
+if (catalogue.contains === keyword);
+  //return a count (Number) of how many book titles match a given keyword
+  return count;
+  }
 }
 
 function getBooksByAuthor(author) {
